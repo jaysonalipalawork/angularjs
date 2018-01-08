@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Converter</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<section>
+    <div ng-app="myApp" ng-controller="myCtrl" class="container">
+        <div class="row">
+            <br>
+            <div class="col-md-5 col-sm-12">
+                <h2>Convert from 
+                    <select ng-model="convertfrom" ng-change="convertchange()">
+                      <option>Decimal</option>
+                      <option>Binary</option>
+                      <option>Octal</option>
+                      <option>Hexa</option>
+                    </select> 
+                    {{ convertto }}
+                </h2>
+                <label>Enter {{ convertopt }} value:</label>
+                <input type="text" ng-model="inputvalue" class="form-control num"><button ng-click="compute()" class="btn btn-primary btnclick">Convert</button>
+                <br/>
+                <br/>
+                <h3>Answer:</h3>
+                <label>{{ toa }}</label> {{ to1 }}
+                <br/>
+                <label>{{ tob }}</label> {{ to2 }}
+                <br/>
+                <label>{{ toc }}</label> {{ to3 }}   
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <img src="img/html5.png">
+                <img src="img/bootstrap.png">
+                <br><br><br><br>
+                <img src="img/css3.png">
+                <img src="img/angular.png">
+            </div>
+          </div>
+        </div>
+</section>
+<script type="text/javascript" src="newjs.js"></script>
+<!--  
+    //to binary
+    //$scope.decbin = $scope.decvalue;
+    // $scope.bin = "";
+    // do
+    // {
+    //     if(parseInt($scope.decbin) % 2 == 0)
+    //         $scope.bin = "0" + $scope.bin;
+    //     else
+    //         $scope.bin = "1" + $scope.bin;
+    //     $scope.decbin = $scope.decbin / 2;
+    // }
+    // while(parseInt($scope.decbin) >= 1);
+    //$scope.tobin = $scope.bin;
+
+    //to hexa
+    //$scope.dechex = $scope.decvalue;
+    // $scope.hexa = "";
+    // do
+    // {
+    //     if(parseInt($scope.dechex) % 16 == 10)
+    //         $scope.hexa = "A" + $scope.hexa
+    //     else if(parseInt($scope.dechex) % 16 == 11)
+    //         $scope.hexa = "B" + $scope.hexa
+    //     else if(parseInt($scope.dechex) % 16 == 12)
+    //         $scope.hexa = "C" + $scope.hexa
+    //     else if(parseInt($scope.dechex) % 16 == 13)
+    //         $scope.hexa = "D" + $scope.hexa
+    //     else if(parseInt($scope.dechex) % 16 == 14)
+    //         $scope.hexa = "E" + $scope.hexa
+    //     else if(parseInt($scope.dechex) % 16 == 15)
+    //         $scope.hexa = "F" + $scope.hexa
+    //     else
+    //         $scope.hexa = parseInt($scope.dechex) % 16 + "" + $scope.hexa;
+    //     $scope.dechex = parseInt($scope.dechex) / 16;
+    // }
+    // while(parseInt($scope.dechex) >= 16);
+
+    // if(parseInt($scope.dechex) % 16 == 10)
+    //     $scope.hexa = "A" + $scope.hexa
+    // else if(parseInt($scope.dechex) % 16 == 11)
+    //     $scope.hexa = "B" + $scope.hexa
+    // else if(parseInt($scope.dechex) % 16 == 12)
+    //     $scope.hexa = "C" + $scope.hexa
+    // else if(parseInt($scope.dechex) % 16 == 13)
+    //     $scope.hexa = "D" + $scope.hexa
+    // else if(parseInt($scope.dechex) % 16 == 14)
+    //     $scope.hexa = "E" + $scope.hexa
+    // else if(parseInt($scope.dechex) % 16 == 15)
+    //     $scope.hexa = "F" + $scope.hexa
+    // else
+    //     $scope.hexa = parseInt($scope.dechex) % 16 + "" + $scope.hexa;
+    //$scope.tohexa =  $scope.hexa;
+
+    //to octal
+    //$scope.decoct = $scope.decvalue;
+    // $scope.octal = "";
+    // do
+    // {
+    //     $scope.octal = parseInt($scope.decoct) % 8 + "" + $scope.octal;
+    //     $scope.decoct = parseInt($scope.decoct) / 8;
+    // }
+    // while(parseInt($scope.decoct) >= 8);
+    // $scope.tooctal = parseInt($scope.decoct) + $scope.octal; 
+-->
+</body>
+</html>
+
+
